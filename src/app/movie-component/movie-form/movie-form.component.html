@@ -1,0 +1,22 @@
+<form #movieForm="ngForm" (ngSubmit)="onAdd()">
+    <div class="card">
+        <div class="card-body">
+            <div class="form-group">
+                <label for="title">title</label>
+                <input type="text" ngModel #title="ngModel" name="title" required class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="content">content</label>
+                <input type="text" ngModel #content="ngModel" name="content" required class="form-control">
+            </div>
+            <div class="form-group mb-3">
+                <label>Image URL</label>
+                <input type="text" class="form-control" name="image" ngModel required />
+            </div>
+            <div class="form-group">
+                <button  *ngIf="!isInEditMode"  mat-button class="btn-block btn-primary">Add</button>
+                <button  *ngIf="isInEditMode" mat-button class="btn-success btn-block" (click)="onUpdate()">Update</button>
+            </div>
+        </div>
+    </div>
+</form>

@@ -18,6 +18,9 @@ import { MatIconModule } from "@angular/material/icon";
 import { MatDialogModule } from "@angular/material/dialog";
 import { GetConfirmComponent } from './component3/get-confirm/get-confirm.component';
 import { MatSnackBarModule } from "@angular/material/snack-bar";
+import { MovieDashboardComponent } from './movie-component/movie-dashboard/movie-dashboard.component';
+import { MovieCardComponent } from './movie-component/movie-card/movie-card.component';
+import { MovieFormComponent } from './movie-component/movie-form/movie-form.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +33,10 @@ import { MatSnackBarModule } from "@angular/material/snack-bar";
     StdFormComponent,
     StdUiComponent,
     StdDashboardComponent,
-    GetConfirmComponent
+    GetConfirmComponent,
+    MovieDashboardComponent,
+    MovieCardComponent,
+    MovieFormComponent
   ],
   imports: [
     BrowserModule,
