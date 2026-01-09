@@ -1,0 +1,21 @@
+
+<table class="table table-responsive table-bordered w-100">
+    <thead class="w-100">
+        <tr>
+            <th>full name</th>
+            <th>email</th>
+            <th>contact</th>
+            <th>edit</th>
+            <th>Remove</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let std of std">
+            <td>{{std.fname}} {{std.lname}}</td>
+            <td>{{std.email}}</td>
+            <td>{{std.contact}}</td>
+            <td><button class="btn btn-sm btn-primary" (click)="onEdit(std)">Edit</button></td>
+            <td><button class="btn btn-sm btn-danger" (click)="onRemove(std.id)">delete</button></td>
+        </tr>
+    </tbody>
+</table>

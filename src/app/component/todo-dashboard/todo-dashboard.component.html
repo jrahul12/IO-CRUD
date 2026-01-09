@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <app-todo-form 
+            [edit]="editId"
+            (emitUpdate)="onUpdate($event)"
+            (emitAdd)="onAdd($event)"></app-todo-form>
+        </div>
+
+        <div class="col-md-6">
+            <app-todo-list 
+            (emitRemove)="onRemove($event)"
+            (emitEdit)="onEdit($event)"
+            *ngFor="let todo of todoArr" [todo]="todo">
+            </app-todo-list>
+        </div>
+
+    </div>
+</div>

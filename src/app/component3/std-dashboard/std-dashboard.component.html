@@ -1,0 +1,16 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-4">
+            <app-std-form (emitAdd)="onAdd($event)"
+            [edit]="editId"
+            (emitUpdate)="onUpdate($event)"
+            ></app-std-form>
+        </div>
+        <div class="col-md-8">
+            <app-std-ui 
+            (emitEdit)="onEdit($event)"
+            (emitRemove)="onRemove($event)"
+            [std]="studentArr"></app-std-ui>
+        </div>
+    </div>
+</div>

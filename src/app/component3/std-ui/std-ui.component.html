@@ -1,0 +1,24 @@
+<table class="table table-bordered ">
+    <thead class="w-100">
+        <tr>
+            <th>full Name</th>
+            <th>email</th>
+            <th>contact</th>
+            <th>Edit</th>
+            <th>Remove</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let std of std">
+            <td>{{std.fname}} {{std.lname}}</td>
+            <td>{{std.email}}</td>
+            <td>{{std.contact}}</td>
+            <td><button mat-mini-fab color="primary" (click)="onEdit(std)">
+                    <mat-icon >edit</mat-icon>
+                </button></td>
+            <td><button mat-mini-fab color="warn" (click)="onRemove(std.id)">
+                    <mat-icon>delete</mat-icon>
+                </button></td>
+        </tr>
+    </tbody>
+</table>
